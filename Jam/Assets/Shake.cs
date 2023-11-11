@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shake : MonoBehaviour
 {
-    public float ShakeScale = 1;
+    public float ShakeScale = 0.1f;
     private Vector3 startPosition;
     private void Awake()
     {
