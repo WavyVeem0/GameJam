@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    private List<Item> bag;
+    public List<Item> bag;
     public static Inventory instance = null;
     void Start() 
     {
@@ -15,11 +15,24 @@ public class Inventory : MonoBehaviour
     }
     private void InitializeManager()
     {
+        bag = new List<Item>() {};
 
     }
     public void AddToBag(Item thing)
     {
-        this.bag.Add(thing);
+        if (bag.Count < 10)
+        {
+            thing.isInBag = true;
+
+            bag.Add(thing);
+
+            Debug.Log(thing.Name + " has been added!");
+        }
+        else 
+        {
+            Debug.Log("Not enought slots!");
+        }
+
     }
 
     
