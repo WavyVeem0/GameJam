@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class Dialogue : MonoBehaviour
 {
     public Speaker[] allInformations;
-    public UnityAction[] ActionOnAnswers;
+    public UnityAction ActionOnAnswer;
     [SerializeField] private Image speakerImage;
     [SerializeField] private TextSpawn textSpawner;
     [SerializeField] private TextMeshProUGUI[] answerButtonsTextes;
@@ -42,14 +42,14 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
-                    ActionOnAnswers[0].Invoke();
+                    ActionOnAnswer.Invoke();
                     Destroy(gameObject);
                 }
                 break;
             case 1: //SecondAnswer
                 if (currentSpeech < allInformations.Length - 1)
                 {
-                    ActionOnAnswers[1].Invoke();
+                    ActionOnAnswer.Invoke();
                     currentSpeech++;
                     NextSpeech();
                 }

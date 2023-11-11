@@ -9,7 +9,7 @@ public class StartScreen : MonoBehaviour
     public void StartGame(int difficulty)
     {
         var instance = Instantiate(LoadScreenObj, transform);
-        instance.GetComponent<LoadingScreen>().StartLoad(1);
+        instance.GetComponent<LoadingScreen>().StartLoad(1); 
     }
     public void ExitGame()
     {
