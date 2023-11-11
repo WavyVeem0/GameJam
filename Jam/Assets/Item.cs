@@ -16,8 +16,5 @@ public class Item
     {
         
     }
-    void PickUp() 
-    {
-        
-    }
+    
 }

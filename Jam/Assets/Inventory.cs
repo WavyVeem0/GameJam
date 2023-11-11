@@ -6,7 +6,8 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> bag;
     public static Inventory instance = null;
-    void Start() 
+
+    private void Start() 
     {
         if (instance == null) instance = this;
         else if(instance == this) Destroy(gameObject);
@@ -18,6 +19,11 @@ public class Inventory : MonoBehaviour
         bag = new List<Item>() {};
 
     }
+    private void Update() 
+    {
+        Debug.Log(bag[0]);
+    }
+
     public void AddToBag(Item thing)
     {
         if (bag.Count < 10)
