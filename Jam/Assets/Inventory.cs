@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public List<Item> bag;
+    public Canvas HUD;
+    public GameObject perunImg;
     public static Inventory instance = null;
 
     private void Start() 
@@ -26,7 +28,7 @@ public class Inventory : MonoBehaviour
         {
             thing.isInBag = true;
             bag.Add(thing);
-            Debug.Log(thing.Name + " has been added!");
+            perunImg.transform.localScale = new Vector3(0.666f,0.666f,0.666f);
         }
         else 
         {
