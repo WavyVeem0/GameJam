@@ -9,7 +9,7 @@ public class SoundsController : MonoBehaviour
     private float mVolume = 1, sVolume = 1;
     [SerializeField] private AudioSource musicSource, soundsSource;
     [SerializeField] private AudioClip[] soundsClips;
-    public enum AudioClips { ShakeSound, HitSound, ButtonClickSound, DeathSound}
+    public enum AudioClips { ShakeSound, HitSound, ButtonClickSound, DeathSound, OpenDoorSound}
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -22,6 +22,10 @@ public class SoundsController : MonoBehaviour
     {
         soundsSource.pitch = Random.Range(0.9f, 1.1f);
         soundsSource.PlayOneShot(soundsClips[(int)clip]);
+    }
+    public void PlayButtonClickSound()
+    {
+        PlaySound(AudioClips.ButtonClickSound);
     }
     public void ChangeVolume(float volume, bool music)
     {
