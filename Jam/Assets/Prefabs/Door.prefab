@@ -101,7 +101,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041D\u0410\u0416\u041C\u0418\u0422\u0415 \"E\""
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f47461e3ede0e1498ad18c042ae132d, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -168,7 +168,7 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_renderer: {fileID: 4955328468508508072}
   m_maskType: 0
 --- !u!1 &849460277827564008
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 6874844402931812539}
   - component: {fileID: 5532075193776770399}
   - component: {fileID: 500199211905646717}
-  - component: {fileID: 1567115205779545959}
+  - component: {fileID: 61196958156228859}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -331,7 +331,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1567115205779545959
+--- !u!114 &61196958156228859
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 849460277827564008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19cb1d9d026187e4698ab17278dfaeca, type: 3}
+  m_Script: {fileID: 11500000, guid: 068f9f31aec202e4084101c4f0005f63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   placeToTeleport: {fileID: 0}
