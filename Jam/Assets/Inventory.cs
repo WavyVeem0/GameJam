@@ -19,10 +19,6 @@ public class Inventory : MonoBehaviour
         bag = new List<Item>() {};
 
     }
-    private void Update() 
-    {
-        Debug.Log(bag[0]);
-    }
 
     public void AddToBag(Item thing)
     {
