@@ -401,6 +401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e15079caad9bf9a7aaa7f33c718702c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cooldown: 0
+  maxCooldown: 20
+  isActive: 0
+  speedDuration: 10
 --- !u!1 &1008272199
 GameObject:
   m_ObjectHideFlags: 0
