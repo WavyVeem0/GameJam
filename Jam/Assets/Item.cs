@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public string naming;
-
+    public string Name;
+    public bool isInBag = false;
     void Use()
+    {
+        
+    }
+    void PickUp() 
     {
         
     }

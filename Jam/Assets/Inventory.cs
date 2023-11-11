@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<Item> bag;
-    // Start is called before the first frame update
-    void Start()
+    private List<Item> bag;
+    public static Inventory instance = null;
+    void Start() 
     {
-         
+        if (instance == null) instance = this;
+        else if(instance == this) Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
+        InitializeManager();
+    }
+    private void InitializeManager()
+    {
+
+    }
+    public void AddToBag(Item thing)
+    {
+        this.bag.Add(thing);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-        if (Input.GetKeyDown(KeyCode.LeftControl))
-        {
-            Debug.Log(Input.GetKeyDown(KeyCode.LeftControl));
-        }
-    }
+    
 }
