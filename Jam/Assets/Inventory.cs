@@ -23,9 +23,7 @@ public class Inventory : MonoBehaviour
         if (bag.Count < 10)
         {
             thing.isInBag = true;
-
             bag.Add(thing);
-
             Debug.Log(thing.Name + " has been added!");
         }
         else 
