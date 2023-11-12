@@ -10,6 +10,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void OnEnable() 
     {
+        Debug.Log(1);
         target = GameObject.Find("PlayerPrefab");
         rb = gameObject.GetComponent<Rigidbody2D>();
         Vector3 forceVector = target.transform.position - gameObject.transform.position;

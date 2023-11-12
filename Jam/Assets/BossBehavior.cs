@@ -15,15 +15,13 @@ public class BossBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        maxTimer = fireRate;
     }
 
     // Update is called once per frame
     void Update()
     {
         fireRate -= Time.deltaTime;
-        
-        
         Vector3 target = new Vector3(player.transform.position.x,gameObject.transform.position.y,0);
         gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, target, ratio);
             
