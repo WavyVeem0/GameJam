@@ -21,14 +21,20 @@ public class BossBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        fireRate -= Time.deltaTime;
-        Vector3 target = new Vector3(player.transform.position.x,gameObject.transform.position.y,0);
-        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, target, ratio);
+        if (CandleScript.counter < 3){
+            fireRate -= Time.deltaTime;
+            Vector3 target = new Vector3(player.transform.position.x,gameObject.transform.position.y,0);
+            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, target, ratio);
             
-        if(fireRate <= 0) 
+            if(fireRate <= 0) 
+            {
+                Instantiate(bullet, spawnPoint.transform.position, gameObject.transform.rotation);
+                fireRate = maxTimer;
+            }
+        }
+        else 
         {
-            Instantiate(bullet, spawnPoint.transform.position, gameObject.transform.rotation);
-            fireRate = maxTimer;
+            gameObject.transform.rotation = new Quaternion(Random.Range(-10.0f, 10.0f),Random.Range(-10.0f, 10.0f),Random.Range(-10.0f, 10.0f),1);
         }
 
         
