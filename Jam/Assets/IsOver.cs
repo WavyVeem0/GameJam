@@ -12,7 +12,7 @@ public class IsOver : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R) && isOver)
         {
-            SceneManager.LoadScene(1);
+            Application.Quit();
             isOver = false;
         }
     }

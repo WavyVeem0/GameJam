@@ -16,8 +16,8 @@ public class Flat : MonoBehaviour
         usedDialogues = new bool[allDialogues.Length];
         for(int  i = 0; i < allDialogues.Length; i++)
         {
-            if (PlayerPrefs.GetInt(i.ToString() + "D", 0) == 1)
-                usedDialogues[i] = true;
+            //if (PlayerPrefs.GetInt(i.ToString() + "D", 0) == 1)
+                //usedDialogues[i] = true;
         }
     }
     private void Start()

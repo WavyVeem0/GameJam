@@ -1812,6 +1812,7 @@ GameObject:
   - component: {fileID: 1757723972}
   - component: {fileID: 1757723974}
   - component: {fileID: 1757723975}
+  - component: {fileID: 1757723976}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1946,6 +1947,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressTextObj: {fileID: 1937355948}
   idDialogue: 3
+--- !u!114 &1757723976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757723971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed1be3ea981b5bae4a8a338e829822c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressTextObj: {fileID: 0}
 --- !u!1001 &1760607725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2243,12 +2257,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1937355950}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1937355950
 MeshRenderer:
   m_ObjectHideFlags: 0
