@@ -12,7 +12,7 @@ public class TP_KV_UL : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
                 Destroy(collision.gameObject);
             }
         }

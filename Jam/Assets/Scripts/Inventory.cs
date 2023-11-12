@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour
 {
     public List<Item> bag;
     public UnityAction onTakeItemAction;
+    public GameObject perunImg;
     public static Inventory instance = null;
 
     private void Start() 
