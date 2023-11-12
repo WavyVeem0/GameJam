@@ -1,10 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
     public List<Item> bag;
+    public UnityAction onTakeItemAction;
     public static Inventory instance = null;
 
     private void Start() 
@@ -29,6 +32,7 @@ public class Inventory : MonoBehaviour
         if (bag.Count < 10)
         {
             thing.isInBag = true;
+            onTakeItemAction.Invoke();
             bag.Add(thing);
             Debug.Log(thing.Name + " has been added!");
         }
