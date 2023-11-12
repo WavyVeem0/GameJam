@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Teleport : MonoBehaviour
+public class TP_2_UL : MonoBehaviour
 {
-    public Transform placeToTeleport;
     [SerializeField] private GameObject pressTextObj;
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (collision.tag == "Player")
         {
-            if(Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
-                collision.gameObject.transform.position = placeToTeleport.position;
+                SceneManager.LoadScene(1);
+                Destroy(collision.gameObject);
             }
         }
     }
