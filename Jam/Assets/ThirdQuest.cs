@@ -11,7 +11,7 @@ public class ThirdQuest : Quest
     public void StartQuest(float speed, int maxButtonsCount)
     {
         var instance = Instantiate(QTEobj);
-        QuickTimeEvent qteInstance = instance.GetComponent<QuickTimeEvent>();
+        QuickTimeEvent qteInstance = instance.GetComponentInChildren<QuickTimeEvent>();
         qteInstance.buttonsCount = UnityEngine.Random.Range(3, maxButtonsCount);
         qteInstance.timeToClick = speed;
         qteInstance.ActionOnWin += NextStage;

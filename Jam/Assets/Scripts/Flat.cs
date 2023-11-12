@@ -27,7 +27,7 @@ public class Flat : MonoBehaviour
     public void CheckDialogues()
     {
         if (SceneManager.GetActiveScene().name == "Kvartira" && !usedDialogues[0]) StartDialogue(0);
-        if (SceneManager.GetActiveScene().name == "Uliza" && !usedDialogues[2]) StartDialogue(2);
+        if (SceneManager.GetActiveScene().name == "Uliza" && !usedDialogues[2] && usedDialogues[1]) StartDialogue(2);
     }
     public void StartDialogue(int id)
     {

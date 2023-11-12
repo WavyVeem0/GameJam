@@ -2209,9 +2209,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a70c0d2c78f7474d9e66951d753e02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  id: 2
   completeState: 0
-  QTEobj: {fileID: 0}
+  QTEobj: {fileID: 6643371082201796730, guid: 2cacf9c898c315b4a9beefefaaff8307, type: 3}
   pressTextObj: {fileID: 1419220681}
 --- !u!1 &1817656697
 GameObject:

@@ -13,6 +13,7 @@ public class TP_UL_HR : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 SceneManager.LoadScene("Hram");
+                SoundsController.Instance.PlaySound(SoundsController.AudioClips.OpenDoorSound);
                 Destroy(collision.gameObject);
             }
         }

@@ -16,7 +16,11 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isDialogue) return;
+        if (isDialogue)
+        {
+            body.velocity = new Vector2(0,0);
+            return;
+        }
         float axisX = Input.GetAxis("Horizontal");
         float axisY = Input.GetAxis("Vertical");
         body.velocity = new Vector2(axisX * speed,axisY * speed);

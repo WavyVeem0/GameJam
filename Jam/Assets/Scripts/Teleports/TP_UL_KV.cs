@@ -13,6 +13,7 @@ public class TP_UL_KV : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 SceneManager.LoadScene("Kvartira");
+                SoundsController.Instance.PlaySound(SoundsController.AudioClips.OpenDoorSound);
                 Destroy(collision.gameObject);
             }
         }

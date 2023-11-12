@@ -13,6 +13,7 @@ public class TP_2_PD : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 SceneManager.LoadScene("Podval_KPSS");
+                SoundsController.Instance.PlaySound(SoundsController.AudioClips.OpenDoorSound);
                 Destroy(collision.gameObject);
             }
         }

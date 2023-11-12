@@ -13,7 +13,8 @@ public class TP_2_UL_PD : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 StaticHolder.LastLocation = 4;
-                SceneManager.LoadScene("Uliza ");
+                SceneManager.LoadScene("Uliza");
+                SoundsController.Instance.PlaySound(SoundsController.AudioClips.OpenDoorSound);
                 Destroy(collision.gameObject);
             }
         }

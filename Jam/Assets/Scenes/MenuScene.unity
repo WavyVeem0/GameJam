@@ -1324,9 +1324,10 @@ MonoBehaviour:
   soundsClips:
   - {fileID: 8300000, guid: e079379a381a63d4d94d530487997f1c, type: 3}
   - {fileID: 8300000, guid: e079379a381a63d4d94d530487997f1c, type: 3}
+  - {fileID: 8300000, guid: 1e8b9e94380d7c54781e980c4c876096, type: 3}
   - {fileID: 8300000, guid: e079379a381a63d4d94d530487997f1c, type: 3}
-  - {fileID: 8300000, guid: e079379a381a63d4d94d530487997f1c, type: 3}
-  - {fileID: 8300000, guid: e079379a381a63d4d94d530487997f1c, type: 3}
+  - {fileID: 8300000, guid: e7b8a7a1e83b85647bd5b6988003554d, type: 3}
+  - {fileID: 8300000, guid: bcf67da1b3a581641b6f3bc4c6c04e72, type: 3}
 --- !u!1 &653767049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,9 +1370,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 57ce7315c5b293f43bebb93d4afe24e8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.407
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4143,7 +4144,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 8c25a8933411cfd4ebfb2cc3f26ac066, type: 3}
-  m_Color: {r: 0.7169812, g: 0.7169812, b: 0.7169812, a: 1}
+  m_Color: {r: 0.9150943, g: 0.51279813, b: 0.7782453, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

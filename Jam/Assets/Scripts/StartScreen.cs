@@ -13,7 +13,6 @@ public class StartScreen : MonoBehaviour
     }
     public void ExitGame()
     {
-        print("ЗДЕСЬ НЕТ ВЫХОДА 🤬");
-        // Application.Quit();
+        Application.Quit();
     }
 }

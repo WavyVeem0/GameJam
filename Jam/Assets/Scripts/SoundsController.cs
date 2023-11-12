@@ -9,21 +9,28 @@ public class SoundsController : MonoBehaviour
     private float mVolume = 1, sVolume = 1;
     [SerializeField] private AudioSource musicSource, soundsSource;
     [SerializeField] private AudioClip[] soundsClips;
-    public enum AudioClips { ShakeSound, HitSound, ButtonClickSound, DeathSound, OpenDoorSound}
+    public enum AudioClips { ShakeSound, HitSound, ButtonClickSound, DeathSound, OpenDoorSound, WinSound    }
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(gameObject);
+        DontDestroyOnLoad(gameObject);
         mVolume = PlayerPrefs.GetFloat("mVolume", 1);
         sVolume = PlayerPrefs.GetFloat("sVolume", 1);
     }
-
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            PlayButtonClickSoun();
+        }
+    }
     public void PlaySound(AudioClips clip) 
     {
         soundsSource.pitch = Random.Range(0.9f, 1.1f);
         soundsSource.PlayOneShot(soundsClips[(int)clip]);
     }
-    public void PlayButtonClickSound()
+    public void PlayButtonClickSoun()
     {
         PlaySound(AudioClips.ButtonClickSound);
     }
