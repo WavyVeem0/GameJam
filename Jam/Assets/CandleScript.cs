@@ -6,6 +6,7 @@ public class CandleScript : MonoBehaviour
 {
     public static int counter = 0;
     private bool isActive = true;
+    public Sprite ActiveCandle;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class CandleScript : MonoBehaviour
             {
                 counter++;
                 isActive = !isActive;
-                gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                gameObject.GetComponent<SpriteRenderer>().sprite = ActiveCandle;
             }
         }
     }

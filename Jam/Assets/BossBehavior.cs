@@ -34,10 +34,19 @@ public class BossBehavior : MonoBehaviour
         }
         else 
         {
+            IsOver.isOver = true;
             gameObject.transform.rotation = new Quaternion(Random.Range(-10.0f, 10.0f),Random.Range(-10.0f, 10.0f),Random.Range(-10.0f, 10.0f),1);
         }
 
         
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player")
+        {
+            IsOver.isOver = true;
+            Destroy(other.gameObject);
+        }
     }
 
         
