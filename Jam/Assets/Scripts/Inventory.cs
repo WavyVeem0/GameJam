@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     {
         if (instance == null) instance = this;
         else if(instance == this) Destroy(gameObject);
-        DontDestroyOnLoad(gameObject);
+        
         InitializeManager();
     }
     private void Update()
