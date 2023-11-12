@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FirstQuest : Quest
 {
-    private void Awake()
+    private void Start()
     {
         Inventory.instance.onTakeItemAction += EndQuest;
     }

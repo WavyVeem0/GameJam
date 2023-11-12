@@ -40,4 +40,9 @@ public class TextSpawn : MonoBehaviour, IPointerDownHandler
         if (isSpawning) speed = 0.001f;
         else dS.ActivateAnswers(true);
     }
+    public void Da()
+    {
+        if (isSpawning) speed = 0.001f;
+        else dS.ActivateAnswers(true);
+    }
 }

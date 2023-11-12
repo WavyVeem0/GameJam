@@ -9,15 +9,18 @@ public class Inventory : MonoBehaviour
     public List<Item> bag;
     public GameObject perunImg;
     public UnityAction onTakeItemAction;
-    public GameObject perunImg;
     public static Inventory instance = null;
 
-    private void Start() 
+    private void Awake() 
     {
         if (instance == null) instance = this;
         else if(instance == this) Destroy(gameObject);
         DontDestroyOnLoad(gameObject);
         InitializeManager();
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.L)) { PlayerPrefs.DeleteAll(); }
     }
     private void InitializeManager()
     {

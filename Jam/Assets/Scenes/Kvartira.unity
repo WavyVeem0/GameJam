@@ -2482,10 +2482,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6874844402931812539, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
-      propertyPath: m_Color.a
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6874844402931812539, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -2508,7 +2504,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 849460277827564008, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 257945553}
+      addedObject: {fileID: 257945558}
   m_SourcePrefab: {fileID: 100100000, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
 --- !u!1 &1480052963 stripped
 GameObject:
@@ -2548,6 +2544,8 @@ MonoBehaviour:
   - {fileID: 1913903032268233533, guid: cd43ea56ba62b0f4e82e0ac850810655, type: 3}
   - {fileID: 2903803852411349436, guid: b69c9190d56f612449a6b870656c3d60, type: 3}
   - {fileID: 3220097657401078592, guid: add64597020ee93419fcf2bf679a1bdf, type: 3}
+  - {fileID: 3220097657401078592, guid: add64597020ee93419fcf2bf679a1bdf, type: 3}
+  - {fileID: 4721892538931872378, guid: 4b63c3ac1fc8e2c478ed3ed23d4fbe1d, type: 3}
   usedDialogues: 0000
 --- !u!4 &1523056754
 Transform:

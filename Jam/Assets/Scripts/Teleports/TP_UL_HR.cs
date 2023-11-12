@@ -12,7 +12,7 @@ public class TP_UL_HR : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene("Hram");
                 Destroy(collision.gameObject);
             }
         }

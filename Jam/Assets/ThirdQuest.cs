@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class ThirdQuest : Quest
 {
-    [SerializeField] private GameObject QTEobj, pressTextObj, canvasObj, dialogueObj;
+    [SerializeField] private GameObject QTEobj, pressTextObj;
     private int stage;
+    private bool started;
     public void StartQuest(float speed, int maxButtonsCount)
     {
-        var instance = Instantiate(QTEobj, canvasObj.transform);
+        var instance = Instantiate(QTEobj);
         QuickTimeEvent qteInstance = instance.GetComponent<QuickTimeEvent>();
         qteInstance.buttonsCount = UnityEngine.Random.Range(3, maxButtonsCount);
         qteInstance.timeToClick = speed;
@@ -27,10 +28,13 @@ public class ThirdQuest : Quest
     {
         if (collision.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
-                var instance = Instantiate(dialogueObj, canvasObj.transform);
-                instance.GetComponent<Dialogue>().ActionOnAnswer += NextStage;
+                if(!started)
+                {
+                    NextStage();
+                    started = true;
+                }
             }
         }
     }

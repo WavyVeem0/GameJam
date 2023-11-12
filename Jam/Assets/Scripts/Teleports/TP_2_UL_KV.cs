@@ -13,7 +13,7 @@ public class TP_2_UL_KV : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 StaticHolder.LastLocation = 3;
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene("Uliza");
                 Destroy(collision.gameObject);
             }
         }

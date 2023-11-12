@@ -12,7 +12,7 @@ public class TP_2_PD : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene(4);
+                SceneManager.LoadScene("Podval_KPSS");
                 Destroy(collision.gameObject);
             }
         }

@@ -12,7 +12,7 @@ public class TP_UL_KV : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene(3);
+                SceneManager.LoadScene("Kvartira");
                 Destroy(collision.gameObject);
             }
         }
