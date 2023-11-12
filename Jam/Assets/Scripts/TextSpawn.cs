@@ -29,7 +29,7 @@ public class TextSpawn : MonoBehaviour, IPointerDownHandler
             textOnObject.text += text[i];
             yield return new WaitForSeconds(speed);
         }
-        dS.ActivateAnswers(false);
+        if(dS != null) dS.ActivateAnswers(false);
         speed = 0.03f;
         isSpawning = false;
         yield return null;
@@ -38,11 +38,11 @@ public class TextSpawn : MonoBehaviour, IPointerDownHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         if (isSpawning) speed = 0.001f;
-        else dS.ActivateAnswers(true);
+        else if (dS != null) dS.ActivateAnswers(true);
     }
     public void Da()
     {
         if (isSpawning) speed = 0.001f;
-        else dS.ActivateAnswers(true);
+        else if (dS != null) dS.ActivateAnswers(true);
     }
 }

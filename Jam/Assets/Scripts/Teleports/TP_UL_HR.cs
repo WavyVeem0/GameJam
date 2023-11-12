@@ -12,9 +12,7 @@ public class TP_UL_HR : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene("Hram");
-                SoundsController.Instance.PlaySound(SoundsController.AudioClips.OpenDoorSound);
-                Destroy(collision.gameObject);
+                Tp();
             }
         }
     }
@@ -25,5 +23,11 @@ public class TP_UL_HR : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player") pressTextObj.SetActive(false);
+    }
+    public void Tp()
+    {
+        SceneManager.LoadScene("Hram");
+        SoundsController.Instance.PlaySound(SoundsController.AudioClips.OpenDoorSound);
+        Destroy(Inventory.instance.gameObject);
     }
 }

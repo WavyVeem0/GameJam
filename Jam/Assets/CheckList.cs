@@ -7,7 +7,7 @@ public class CheckList : MonoBehaviour
 
     public bool[] completedQuests = new bool[10];
     [SerializeField] private GameObject[] crosses;
-    [SerializeField] private GameObject cn;
+    [SerializeField] private GameObject cn, endObj;
     
     static public CheckList Instance { get; private set; }
     private void Awake()
@@ -23,6 +23,10 @@ public class CheckList : MonoBehaviour
             if (completedQuests[i])
             {
                 crosses[i].SetActive(true);
+                if(i == 2)
+                {
+                    Instantiate(endObj);
+                }
             } 
         }
     }
