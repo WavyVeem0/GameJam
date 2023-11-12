@@ -15,6 +15,7 @@ public class Dialogue : MonoBehaviour
     private int currentSpeech;
     private void Start()
     {
+        Move.isDialogue = true; 
         NextSpeech();
     }
     private void NextSpeech()
@@ -42,19 +43,21 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
-                    ActionOnAnswer.Invoke();
+                    ActionOnAnswer?.Invoke();
+                    Move.isDialogue = false;
                     Destroy(gameObject);
                 }
                 break;
             case 1: //SecondAnswer
                 if (currentSpeech < allInformations.Length - 1)
                 {
-                    ActionOnAnswer.Invoke();
+                    ActionOnAnswer?.Invoke();
                     currentSpeech++;
                     NextSpeech();
                 }
                 else
                 {
+                    Move.isDialogue = false;
                     Destroy(gameObject);
                 }
                 break;
@@ -66,6 +69,7 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
+                    Move.isDialogue = false;
                     Destroy(gameObject);
                 }
                 break;

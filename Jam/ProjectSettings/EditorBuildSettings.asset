@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Kvartira.unity
+    guid: 4e9fd34d5b1a67549bcd1e5166e635b3
+  - enabled: 1
     path: Assets/Scenes/Uliza.unity
     guid: 606e054ea66cb4444b82cadaae9c89b9
   - enabled: 1

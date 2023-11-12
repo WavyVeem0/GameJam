@@ -6,6 +6,7 @@ public class Move : MonoBehaviour
 {
     private Rigidbody2D body;
     public float speed;
+    static public bool isDialogue;
     
     // Start is called before the first frame update
     private void Awake() {
@@ -15,6 +16,7 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDialogue) return;
         float axisX = Input.GetAxis("Horizontal");
         float axisY = Input.GetAxis("Vertical");
         body.velocity = new Vector2(axisX * speed,axisY * speed);

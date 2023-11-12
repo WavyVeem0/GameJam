@@ -36,7 +36,7 @@ public class QuickTimeEvent : MonoBehaviour
             }
             else
             {
-                ActionOnWin.Invoke();
+                ActionOnWin?.Invoke();
                 Destroy(gameObject);
             }
 
