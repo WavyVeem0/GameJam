@@ -22,4 +22,13 @@ public class Bullet : MonoBehaviour
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0) Destroy(gameObject);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Player"){
+         Destroy(other.gameObject);
+         IsOver.isOver = true;
+        }
+
+
+    }
 }
