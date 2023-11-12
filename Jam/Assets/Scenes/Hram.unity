@@ -1174,11 +1174,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2424545472547524153, guid: 0e47b70ebccfc9a5c8740b8d9c070fce, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8317854550754182124, guid: 0e47b70ebccfc9a5c8740b8d9c070fce, type: 3}
       propertyPath: m_Name
       value: PlayerPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902445622395704750, guid: 0e47b70ebccfc9a5c8740b8d9c070fce, type: 3}
+      propertyPath: speed
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e47b70ebccfc9a5c8740b8d9c070fce, type: 3}
@@ -1391,7 +1395,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 8c7e99bfa98b79044ae87f0d5f4f5529, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1512,6 +1516,22 @@ PrefabInstance:
     - target: {fileID: 1432334695612913508, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874844402931812539, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874844402931812539, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.49803925
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874844402931812539, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.49803925
+      objectReference: {fileID: 0}
+    - target: {fileID: 6874844402931812539, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}
+      propertyPath: m_Color.r
+      value: 0.49803925
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61196958156228859, guid: 8bb2f053cd426ca418960e2477c570bc, type: 3}

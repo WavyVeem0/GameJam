@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TP_2_UL : MonoBehaviour
+public class TP_2_UL_KV : MonoBehaviour
 {
     [SerializeField] private GameObject pressTextObj;
     private void OnTriggerStay2D(Collider2D collision)
@@ -12,7 +12,7 @@ public class TP_2_UL : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                StaticHolder.LastLocation = 2;
+                StaticHolder.LastLocation = 3;
                 SceneManager.LoadScene(1);
                 Destroy(collision.gameObject);
             }
