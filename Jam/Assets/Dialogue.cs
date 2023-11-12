@@ -2,10 +2,12 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class Dialogue : MonoBehaviour
 {
     public Speaker[] allInformations;
+    public UnityAction ActionOnAnswer;
     [SerializeField] private Image speakerImage;
     [SerializeField] private TextSpawn textSpawner;
     [SerializeField] private TextMeshProUGUI[] answerButtonsTextes;
@@ -40,12 +42,14 @@ public class Dialogue : MonoBehaviour
                 }
                 else
                 {
+                    ActionOnAnswer.Invoke();
                     Destroy(gameObject);
                 }
                 break;
             case 1: //SecondAnswer
                 if (currentSpeech < allInformations.Length - 1)
                 {
+                    ActionOnAnswer.Invoke();
                     currentSpeech++;
                     NextSpeech();
                 }

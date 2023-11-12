@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QuickTimeEvent : MonoBehaviour
 {
     public float timeToClick = 1;
     public int buttonsCount = 3;
+    public UnityAction ActionOnWin;
     [SerializeField] private Animator[] buttonsAnimators;
     private int pressedButtons;
     private int currentPressedButton = -1;
@@ -34,7 +36,7 @@ public class QuickTimeEvent : MonoBehaviour
             }
             else
             {
-                print("ПОДЕБА"); // Если игрок смог справиться с QTE, то что-то должно произойти
+                ActionOnWin.Invoke();
                 Destroy(gameObject);
             }
 
@@ -43,7 +45,6 @@ public class QuickTimeEvent : MonoBehaviour
 
         if(failure)
         {
-            print("НЕПОДЕБА"); // Что-то происходит из-за того, что игрок не справился с QTE
             Destroy(gameObject);
         }
     }
