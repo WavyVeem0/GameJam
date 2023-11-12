@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kvartira.unity
     guid: 4e9fd34d5b1a67549bcd1e5166e635b3
+  - enabled: 1
+    path: Assets/Scenes/Podval_KPSS.unity
+    guid: 87041640d02389a42b9c04822611737f
   m_configObjects: {}

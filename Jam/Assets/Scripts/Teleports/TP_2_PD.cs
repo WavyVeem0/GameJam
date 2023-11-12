@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TP_KV_UL : MonoBehaviour
+public class TP_2_PD : MonoBehaviour
 {
     [SerializeField] private GameObject pressTextObj;
     private void OnTriggerStay2D(Collider2D collision)
@@ -12,7 +12,7 @@ public class TP_KV_UL : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(4);
                 Destroy(collision.gameObject);
             }
         }
