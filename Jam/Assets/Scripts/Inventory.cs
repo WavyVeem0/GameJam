@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public List<Item> bag;
+    public GameObject perunImg;
     public UnityAction onTakeItemAction;
     public GameObject perunImg;
     public static Inventory instance = null;
@@ -29,7 +30,7 @@ public class Inventory : MonoBehaviour
         if (bag.Count < 10)
         {
             thing.isInBag = true;
-            onTakeItemAction.Invoke();
+            onTakeItemAction?.Invoke();
             bag.Add(thing);
             perunImg.transform.localScale = new Vector3(0.666f,0.666f,0.666f);
         }
